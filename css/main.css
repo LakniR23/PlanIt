@@ -1,0 +1,36 @@
+.sections {
+    border: none;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    border-radius: 20px;
+    background-color: rgb(255,255,255,0.7);
+    height:300px;
+    width:50%;
+    justify-content: space-around;
+    align-items: center;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom:50px;
+    text-align: center;
+}
+.sections {
+    padding-top:50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.sections > .part2 {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-left:30px;
+    padding-right:30px;
+}
+.sections a {
+    text-decoration: none;
+    color:black;
+}
+
+.sections a:hover {
+    transform: scale(1.2);
+}

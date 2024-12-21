@@ -1,0 +1,157 @@
+/* Body styles */
+.body {
+    border: none;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    border-radius: 20px;
+    background-color: rgb(255,255,255,0.5);
+    width: 100%;
+    max-width: 540px;
+    padding: 0px 30px 30px 30px;
+    justify-content: space-around;
+    align-items: center;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    text-align: justify;
+    height: 600px;
+    flex:1;
+    overflow: hidden;  /* Prevent the whole body from scrolling */
+    position: relative; /* Ensure the body is positioned relative */
+}
+
+.body h1 {
+    text-align: center;
+    padding-top: 30px;
+    position: relative;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 20px;
+    padding-left: 20px;
+    margin-bottom: 25px;
+    background: #fdfdff;
+    border-radius: 40px;
+    margin-bottom: 25px;
+    position: sticky; /* Make sure the row and options stay fixed */
+    top: 0; /* Pin them at the top of the body */
+} 
+
+.row input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+}
+
+.row button {
+    border: none;
+    outline: none;
+    padding: 16px 30px;
+    background: #1995AD;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 40px;
+    transition: all 0.3s;
+}
+
+.row button:hover {
+    background: #790e94;
+    transform: scale(1.05);
+}
+
+.options {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 400px;
+    margin-left: 30px;
+    position: sticky; /* Make sure the row and options stay fixed */
+    top: 0; /* Pin them at the top of the body */
+    margin-bottom: 30px;;
+}
+
+.options button {
+    width: 110px;
+    height: 30px;
+    background-color: rgba(129, 126, 126, 0.635);
+    border-radius: 10px;
+    border: 2px solid black;
+    transition: all 0.3s;
+}
+
+.options button:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.tasks {
+    max-height: 400px; /* Set a max height for the tasks section */
+    overflow-y: auto; /* Allow vertical scrolling */
+    padding-bottom: 20px;  /* Space for the last item */
+}
+
+/* Hide the scrollbar */
+.tasks::-webkit-scrollbar {
+    display: none;
+}
+
+.task > #list-container{
+    height: 300px;
+    overflow-y: auto; /* Enable vertical scrolling */
+    position: relative; /* Ensure the body is positioned relative */
+}
+
+.tasks > #list-container li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: none;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    margin-bottom: 20px;
+    margin-top: 20px;
+    height: 40px;
+    margin-right: 40px;
+    background-color: white;
+    padding-left: 30px;
+    border-radius: 10px;
+    padding-right: 40px;
+    transition: all 0.3s;
+}
+
+.tasks > #list-container li:hover {
+    background-color: #A1D6E2;
+    transform: scale(1.03);
+}
+
+/* Style for completed task (strike-through and light grey background) */
+#list-container li.completed {
+    background-color: #a2a0a096; /* Light grey background */
+}
+
+#list-container li.completed span {
+    text-decoration: line-through; /* Strike-through effect */
+    color: gray; /* Optional: change the color of the text */
+}
+
+/* List Item span and trash icon */
+#list-container li span {
+    flex: 1; /* Make the task text take up full width */
+    cursor: pointer;
+}
+
+#list-container li .fa-trash {
+    color: #000000; /* Trash icon color */
+    cursor: pointer;
+    font-size: 18px;
+    transition: all 0.3s;
+}
+
+#list-container li .fa-trash:hover {
+    color: #dc143c; /* Darker red on hover */
+    transform: scale(1.2); /* Slightly bigger when hovered */
+}
